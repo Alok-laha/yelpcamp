@@ -1,0 +1,23 @@
+<%-include("header")%>
+
+
+<h2> <%= foundcamp.name %></h2>
+
+<img src=" <%= foundcamp.image %> ">
+
+<p>  <%= foundcamp.description %> </p>
+
+<% var i=0 %>
+<% foundcamp.comment.forEach(function(item){ %>
+     
+<p>
+    
+    <%= foundcamp.comment[i].text %> Submitted by <%= foundcamp.comment[i].author %>
+    <% i=i+1 %>
+</p>
+        
+        
+   <% }) %> 
+<a class="btn btn-primary" href="/campground">Go back</a>
+
+<%-include("footer")%>
